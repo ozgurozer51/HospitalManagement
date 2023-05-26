@@ -1,0 +1,14 @@
+[08-Feb-2023 19:27:43 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "" in /home/systemihars/public_html/controller/fonksiyonlar.php:882
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(882): PDOStatement->execute(Array)
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-alma/sql-numunealma.php(262): direktguncelle('patient_prompts', 'service_request...', '3364947889', Array)
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 882
+[06-Mar-2023 09:05:46 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 15: where pp.patient_id = '' and pp.sampling_confirmation = 1 an...
+                               ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1399
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1399): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-alma/sql-numunealma.php(372): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1399

@@ -1,0 +1,16 @@
+[30-Mar-2023 08:57:11 europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from district where province_number=
+                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select * from d...')
+#1 /home/systemihars/public_html/ajax/hastaislemleri/hasta-kayit-detay.php(126): sql_select('select * from d...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[30-Mar-2023 14:46:26 europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from district where province_number=
+                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select * from d...')
+#1 /home/systemihars/public_html/ajax/hastaislemleri/hasta-kayit-detay.php(126): sql_select('select * from d...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415

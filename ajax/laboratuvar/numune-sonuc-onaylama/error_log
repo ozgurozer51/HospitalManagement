@@ -1,0 +1,113 @@
+[14-Mar-2023 13:54:46 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 16:   and pp.patient_id = 
+                               ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1399
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1399): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(441): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1399
+[17-Mar-2023 15:54:33 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near ")"
+LINE 18: ... lab_analysis_results as lar where lar.patient_promptsid = )
+                                                                       ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select ltp.id  ...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(250): verilericoklucek('select ltp.id  ...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[18-Mar-2023 13:29:37 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "DESC"
+LINE 1: ... and patient_promptsid='1795' group by insert_datetime DESC 
+                                                                  ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select number_o...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(475): verilericoklucek('select number_o...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 10:34:51 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-24 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 10:34:56 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 10:37:24 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-24 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 10:37:28 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 10:54:16 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 10:54:34 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 12:17:30 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 18: ...e_status = 1   and pp.service_requests_bardoce=   and pp.pro...
+                                                              ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 12:41:14 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 12:41:57 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[24-Mar-2023 12:43:24 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: date >= integer
+LINE 14: where DATE(pp.sample_date) between 2023-03-01 and 2023-03-24
+                                    ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts. in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select distinct...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/numune-sonuc-onaylama/sql-sonuconaylama.php(698): verilericoklucek('select distinct...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398

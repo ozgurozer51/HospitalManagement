@@ -1,0 +1,64 @@
+[20-Mar-2023 12:45:16 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 4: ...orized_units.status = 1 and users_outhorized_units.userid=''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select *\r\n    f...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(792): sql_select('select *\r\n    f...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 12:45:16 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 6: ...             and users_outhorized_units.userid =  and units....
+                                                             ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select units.de...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(779): sql_select('select units.de...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 12:45:16 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 6: ...             and users_outhorized_units.userid =  and units....
+                                                             ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select units.de...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(779): sql_select('select units.de...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 13:36:10 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 4: ...horized_units.status = 1 and users_outhorized_units.unit_id=
+                                                                       ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select users.na...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(817): sql_select('select users.na...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 13:40:39 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 2:                       from units and units.status = 1 and un...
+                                         ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select units.de...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(800): sql_select('select units.de...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 13:40:39 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 2:                       from units and units.status = 1 and un...
+                                         ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select units.de...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(800): sql_select('select units.de...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 14:47:05 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from consultation where id=
+                                            ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select * from c...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(972): sql_select('select * from c...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 14:47:07 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from consultation where id=
+                                            ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select * from c...')
+#1 /home/systemihars/public_html/ajax/konsultasyon/konsultasyon.php(972): sql_select('select * from c...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415

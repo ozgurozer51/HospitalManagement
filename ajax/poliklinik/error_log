@@ -1,0 +1,8 @@
+[08-Apr-2023 13:46:15 europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from users where id=
+                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select * from u...')
+#1 /home/systemihars/public_html/ajax/poliklinik/poliklinik-liste.php(17): sql_select('select * from u...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415

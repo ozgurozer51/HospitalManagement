@@ -1,0 +1,141 @@
+<?php
+include "../../controller/fonksiyonlar.php";
+$baglanti = veritabanibaglantisi();
+date_default_timezone_set('Europe/Istanbul');
+$simdikitarih = date('Y/m/d H:i:s');
+$kullanicininidsi=$_GET['kullanicininidsi'];
+$hastakayitgetir = singular("patient_registration", "id", $_GET["protokolno"]);
+?>
+<input autocomplete="off" onkeyup="hastaara(this.value)"
+       style=" height: 45px; padding: 20px; " required="" type="text"
+       class="form-control" placeholder="Hasta Ara" name="tani_adi"
+       id="basicpill-firstname-input">
+<div id="doktorhastalistesinigetir" class="table-responsive mb-4"
+     style="height: 465px;overflow: auto;">
+
+    <table class="table table-striped table-bordered"
+           style=" background:white;width: 100%;">
+        <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Hasta</th>
+            <th scope="col">İşlem</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <?php
+        $yetkilioldugupoliklinikler = birimyetkisisorgula($_SESSION["id"]);
+        
+    
+        $hello=verilericoklucek("SELECT patient_registration.*,patients.*,units.*,users.*, patient_registration.id AS hastakayitid FROM patient_registration INNER JOIN patients ON patient_registration.tc_id=patients.tc_id
+                                                            INNER JOIN users ON users.id=patient_registration.doctor 
+                                                            INNER JOIN units ON units.id=patient_registration.outpatient_id $yetkilioldugupoliklinikler AND patient_registration.insert_datetime like '%$nettarih%' AND patient_registration.examination_start_time IS NULL ");
+
+        foreach ($hello as $str) { 
+            $NAME_SURNAME="";
+            $TCKIMLIK="";
+            $KAYIT_SAATI="";
+            $TCKIMLIK=$str['tc_id'];
+            $KAYIT_SAATI=$str["registration_time"];
+            $KAYIT_EDEN=singular("users","id",$hastakayitgetir["insert_userid"]);
+            $NAME_SURNAME=$KAYIT_EDEN["name_surname"];
+//                                            var_dump($str);
+            ?>
+
+            <tr  id="hastasirasi<?php echo $str['hastakayitid']; ?>" >
+
+                <td><a class="text-body" href="hastadetay?tc_kimlik=<?php echo $str['tc_id']; ?>&protokolno=<?php echo $str['hastakayitid']; ?>"><?php echo $str["row_number"]; ?></a>
+                </td>
+                <td class="hastadetay">
+                    <div class="jctx-host jctx-id-<?php echo $str['tc_id']; ?> demo">    <a class="text-body" href="hastadetay?tc_kimlik=<?php echo $str['tc_id']; ?>&protokolno=<?php echo $str['hastakayitid']; ?>">
+
+                            <?php if ($str["baby"]) {
+                                echo $str["birth_order"].". BEBEK  ";  echo $str["patient_surname"];
+                            }else{?>
+                                <?php echo $str["patient_name"] . " " . $str["patient_surname"]; } ?>
+
+
+                        </a></div>
+                </td>
+                <td class="hastadetay">
+
+
+                
+                    <?PHP if($str["muayene_baslama_zamani"]==""){ ?>
+                    
+                            <button type="button"   poliklinikid="<?php echo $str["outpatient_id"]; ?>"  tcno="<?php echo $str['tc_id']; ?>" hastaninidsi="<?php echo $str['hastakayitid']; ?>" protokolno="<?php echo $str['hastakayitid']; ?>" class="disekrancagir btn btn-success waves-effect waves-light">
+                                <?php
+                                //Not $gunceldate hata veriyordu kendim tanımladım
+                                $sonuc=kayitsayisigetir("patient_registration_call_history","tc_id",$str["tc_id"], " AND call_date='$gunceldate' AND call_unit='{$str["outpatient_id"]}' AND call_protocol_number='{$str["hastakayitid"]}'");
+                                
+                                
+                                ?>
+                                Çağır [<span  id="cagrilmasayisi<?php echo $str['hastakayitid']; ?>"><?php echo $sonuc; ?></span>]
+                            </button>    
+                    <?php } ?>
+                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="">
+                        <li><a class="dropdown-item cagirmalistesinigetir " data-toggle="modal" data-target="#cagrikaydinigetir"   poliklinikid="<?php echo $str["outpatient_id"]; ?>"  tc_kimlik="<?php echo $str['tc_id']; ?>" >Çağrı Detayları</a></li>
+                       
+                    </ul> 
+                    <ul class="jctx jctx-id-<?php echo $TCKIMLIK; ?> jctx-black jctx-black-shadow" style="opacity: 0; display: none; left: 1058px; margin-top: -75px;">
+                        <li data-action="back" data-toggle="modal" data-target="#cagrikaydinigetir"  class="cagirmalistesinigetir"     poliklinikid="<?php echo $str["outpatient_id"]; ?>"  tc_kimlik="<?php echo $str['tc_id']; ?>"  > Çağrı kaydını görüntüle</li>
+                        <li data-action="back" data-toggle="modal" data-target="#cagrikaydinigetir"  class="cagirmalistesinigetir"     poliklinikid="<?php echo $str["outpatient_id"]; ?>"  tc_kimlik="<?php echo $str['tc_id']; ?>"  >Kayıt Oluşturan Kullanıcı : <?php echo $NAME_SURNAME; ?> <br/> Kayıt tarihi : <?php echo $KAYIT_SAATI; ?> </li>
+                    </ul>
+                </td>
+
+
+            </tr>
+
+
+        <?php } ?>
+
+
+
+        </tbody>
+    </table>
+
+    <div class="modal fade" action="" method="POST"  id="cagrikaydinigetir" role="dialog">
+        <div id='cagridetayicerik'>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $(".cagirmalistesinigetir").click(function () {
+            var tc_kimlik = $(this).attr('tc_kimlik');
+            var poliklinikid = $(this).attr('poliklinikid');
+            $.get("ajax/cagrikaydidetaylari.php", {tc_kimlik: tc_kimlik,poliklinikid:poliklinikid}, function (getVeri) {
+                $('#cagridetayicerik').html(getVeri);
+            });
+        });
+        $(".disekrancagir").click(function () {
+            var tcno = $(this).attr('tcno');
+            var poliklinikid = $(this).attr('poliklinikid');
+            var protokolno = $(this).attr('protokolno');
+            var hastaninidsi = $(this).attr('hastaninidsi');
+            $.get("siramatik/sorgula.php?islem=hastayicagir", {
+                tcno: tcno,
+                protokolno: protokolno,
+                poliklinikid: poliklinikid
+            }, function (getVeri) {
+                // alert(getVeri)
+
+                var hastasirasialanitcno=document.getElementById("hastasirasi" + hastaninidsi);
+                $('#cagrilmasayisi'+ hastaninidsi).html(getVeri);
+                hastasirasialanitcno.style.backgroundColor="#00FF00";
+                alertify.success("Hasta dış ekrandan çağrıldı");
+            });
+        }); 
+
+    });
+</script>

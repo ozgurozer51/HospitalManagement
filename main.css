@@ -1,0 +1,1324 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+table{
+    font-size: 13px !important;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow:unset !important;
+}
+
+input:required {
+    border-color: #dc3545;
+}
+
+input:required:invalid {
+    border-color: #dc3545;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pageTitle {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #112d4e;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.fs-7 {
+    font-size: 7px;
+}
+
+.card {
+    border: 1px solid #dbe2ef;
+    border-radius: 10px;
+}
+
+
+
+/* COLORS
+
+blue: #3f72af
+soft-blue: #dbe2ef
+soft-pink: #fcd0d0
+
+*/
+
+.btn-primary-2 {
+    background-color: #3f72af;
+}
+
+.preRegisterBtn {
+    font-weight: 600;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.35);
+    font-size: 20px;
+    border: 1px solid #3f72af;
+}
+
+.bgSoftBlue {
+    background-color: #dbe2ef;
+    border: 1px solid #3f72af;
+    border-radius: 5px;
+}
+
+
+.btn-save {
+    background-color: #3f72af;
+}
+
+.bgWhiteLabel {
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.registrationStatus label {
+    width: 20%;
+    color: #112d4e;
+    font-weight: 500;
+}
+
+.registrationStatus input,
+.registrationStatus select {
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    width: 45%;
+}
+
+.pageSubtitle {
+    font-size: 15px;
+    color: #112d4e;
+}
+
+.headerBorder {
+    border: 1px solid #3f72af;
+    border-radius: 5px;
+}
+
+/*.nav-tabs {*/
+/*    display: -webkit-box;*/
+/*    display: -ms-flexbox;*/
+/*    display: flex;*/
+/*    -ms-flex-flow: column nowrap;*/
+/*    flex-flow: column nowrap;*/
+/*    -webkit-box-align: start;*/
+/*    -ms-flex-align: start;*/
+/*    align-items: flex-start;*/
+/*    border: none;*/
+/*}*/
+
+/*.nav-tabs>li {*/
+/*    -webkit-writing-mode: vertical-lr;*/
+/*    -ms-writing-mode: tb-lr;*/
+/*    writing-mode: vertical-lr;*/
+/*    -webkit-transform: rotate(180deg);*/
+/*    transform: rotate(180deg);*/
+/*    -webkit-transform-origin: center center;*/
+/*    transform-origin: center center;*/
+/*    list-style-type: none;*/
+/*    height: 15%;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.nav-tabs>li>a {*/
+/*    display: block;*/
+/*    padding: 25px 10px;*/
+/*    background-color: #dbe2ef;*/
+/*    color: #000;*/
+/*    text-decoration: none;*/
+/*    font-weight: 500;*/
+/*    border: 1px solid #3f72af;*/
+/*    border-radius: 5px;*/
+/*    font-size: 18px;*/
+/*}*/
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: #fff;
+    border: 3px solid #3f72af;
+}
+
+.containerCheckbox:hover input~.checkmark {
+    background-color: #ccc !important;
+}
+
+.containerCheckbox input:checked~.checkmark {
+    background-color: #ffb3b3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.containerCheckbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.containerCheckbox .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 7px;
+    height: 12px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.containerCheckbox {
+    /* display: block; */
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 17px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.containerCheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* GİRİŞ YAP BAŞLANGIÇ */
+
+#girisYapContent .leftBox {
+    width: 45%;
+    background-color: #3f72af;
+    background-image: url(assets/img/login-page-bg.png);
+    background-size: cover;
+}
+
+#girisYapContent .rightBox {
+    width: 55%;
+    background-color: #dbe2ef;
+}
+
+#girisYapContent .cardLeftBox {
+    background-color: #3f72af;
+    width: 40%;
+}
+
+#girisYapContent .cardRightBox {
+    background-color: #dbe2ef;
+    width: 60%;
+}
+
+#girisYapContent h3 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+#girisYapContent h5 {
+    color: #112d4e;
+    font-weight: 400;
+}
+
+#girisYapContent input {
+    border: none;
+    border-radius: 15px;
+    padding: 13px 20px 13px 45px;
+}
+
+#girisYapContent .inputIcon {
+    position: absolute;
+    bottom: 9px;
+    left: 7px;
+}
+
+#girisYapContent .languageFlag {
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+#girisYapContent label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #112d4e;
+}
+
+#girisYapContent .btn-login {
+    color: #fff;
+    background-color: #3f72af;
+    padding: 10px 50px;
+}
+
+#girisYapContent ::placeholder {
+    color: #112d4e;
+}
+
+#girisYapContent .cardBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 50%);
+}
+
+@media (max-width: 1440px) {
+    #girisYapContent .logoImg {
+        width: 225px !important;
+    }
+    #girisYapContent .cardBox {
+        width: 65%;
+    }
+    #girisYapContent .cardLeftBox {
+        background-color: #3f72af;
+        width: 42.3%;
+    }
+    #girisYapContent .cardRightBox {
+        background-color: #dbe2ef;
+        width: 57.7%;
+    }
+}
+
+/* GİRİŞ YAP BİTİŞ */
+
+
+/* HASTA KAYIT BAŞLANGIÇ */
+
+.btn-primary-3 {
+    background-color: #dbe2ef;
+    font-weight: 500;
+}
+
+.btn-primary-3.active {
+    background-color: #dbe2ef;
+    border: 2px solid #3f72af;
+    font-weight: 600;
+}
+
+.bgSoftPink {
+    background-color: #fcd0d0;
+}
+
+#hastaKayitContent .KPSbtn {
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .bgIconPink {
+    background-color: #ffb3b3;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .btn-save {
+    background-color: #dbe2ef;
+}
+
+#hastaKayitContent  .btn-cancel {
+    background-color: #e64848;
+}
+
+
+#hastaKayitContent .bgIconBlue {
+    background-color: #dbe2ef;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .bgIconRed {
+    background-color: #e64848;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .smallDateTimeline {
+    border: 1px solid #dbe2ef;
+    border-radius: 15px;
+}
+
+#hastaKayitContent .patientInformation .col-xl-6.d-flex.align-items-center.mb-2 label {
+    width: 120px;
+}
+
+#hastaKayitContent .patientInformation .col-xl-6.d-flex.align-items-center.mb-2 {
+    /*height: 40px;*/
+}
+
+#hastaKayitContent .institutionOther .col-xl-12 {
+    /*height: 40px;*/
+}
+
+#hastaKayitContent .institutionOther .col-xl-12 label {
+    width: 90px;
+}
+
+#hastaKayitContent .contactInformation .col-xl-12 {
+    /*height: 40px;*/
+}
+
+#hastaKayitContent .contactInformation .col-xl-12 label {
+    width: 90px;
+}
+
+#hastaKayitContent .patientAdmission .col-xl-6.d-flex.align-items-center {
+    height: 40px;
+}
+
+#hastaKayitContent .patientAdmission .col-xl-6.d-flex.align-items-center label {
+    width: 115px;
+}
+
+#hastaKayitContent .contentTitle {
+    font-weight: 700;
+    font-size: 16px;
+    color: #112d4e;
+}
+
+#hastaKayitContent label {
+    font-weight: 600;
+    color: #112d4e;
+    font-size: 14px;
+}
+
+
+#hastaKayitContent input,
+#hastaKayitContent textarea,
+#hastaKayitContent select {
+
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 2px solid #dbe2ef;
+    /*width: 202px;*/
+}
+
+#hastaKayitContent .patientRegistrationTableTitle {
+    border: 1px solid #DBE2EF;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*#hastaKayitContent .patientRegistrationTableContent {*/
+/*    border: 1px solid #DBE2EF;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*#hastaKayitContent .patientRegistrationTableContent {*/
+/*    font-weight: 500;*/
+/*}*/
+
+#hastaKayitContent .patientRegistrationTableContent:hover {
+    background-color: #FFB3B3;
+}
+
+#hastaKayitContent .cancelIcon {
+    background-color: #e64848;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#hastaKayitContent .fileIcon {
+    background-color: #dbe2ef;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#hastaKayitContent .trashIcon {
+    background-color: #3f72af;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#hastaKayitContent .printerIcon {
+    background-color: #ffb3b3;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#hastaKayitContent .patientTableActionCancel {
+    background-color: #e64848;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .patientTableActionAccept {
+    background-color: #ff9551;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .patientTableActionTrash {
+    background-color: #3f72af;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .patientRegistrationArea {
+    border: 1px solid #DBE2EF;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .redSq {
+    background-color: #e64848;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .pinkSq {
+    background-color: #ffb3b3;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+}
+
+#hastaKayitContent .orangeSq {
+    background-color: #ff9551;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    #hastaKayitProcess .preRegisterBtn {
+        font-size: 14px !important;
+    }
+    #hastaKayitProcess .avatarImgLaptop {
+        width: 75px !important;
+    }
+    #hastaKayitProcess .registrationStatus label {
+        width: 35% !important;
+    }
+    #hastaKayitProcess .registrationStatus input,
+    #hastaKayitProcess .registrationStatus select {
+        width: 50%;
+    }
+    #hastaKayitProcess .headerBorder img {
+        width: 50px !important;
+    }
+    #hastaKayitContent .KPSbtn img {
+        width: 30px !important;
+    }
+    #hastaKayitContent .KPSbtn {
+        font-size: 15px !important;
+        width: 100% !important;
+    }
+    #hastaKayitContent .patientInformation input,
+    #hastaKayitContent .patientInformation select {
+        width: 55% !important;
+    }
+    #hastaKayitContent .institutionOther input,
+    #hastaKayitContent .institutionOther select {
+        width: 55% !important;
+    }
+    #hastaKayitContent .contactInformation input,
+    #hastaKayitContent .contactInformation select,
+    #hastaKayitContent .contactInformation textarea {
+        width: 55% !important;
+    }
+    #hastaKayitContent .patientAdmission input,
+    #hastaKayitContent .patientAdmission select {
+        width: 55% !important;
+    }
+    #hastaKayitProcess .bgSoftBlue .col-xl-3.mt-3.px-5 {
+        padding: 0 20px !important;
+    }
+    #hastaKayitProcess .fsLaptop {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 1280px) {
+    #hastaKayitProcess .preRegisterBtn {
+        font-size: 12px !important;
+    }
+    #hastaKayitProcess .avatarImgLaptop {
+        width: 70px !important;
+    }
+    #hastaKayitProcess .registrationStatus label {
+        width: 35% !important;
+    }
+    #hastaKayitProcess .registrationStatus input,
+    #hastaKayitProcess .registrationStatus select {
+        width: 50%;
+    }
+    #hastaKayitProcess .headerBorder img {
+        width: 40px !important;
+    }
+    #hastaKayitContent .KPSbtn img {
+        width: 30px !important;
+    }
+    #hastaKayitContent .KPSbtn {
+        font-size: 15px !important;
+        width: 100% !important;
+    }
+    #hastaKayitContent .patientInformation input,
+    #hastaKayitContent .patientInformation select {
+        width: 50% !important;
+    }
+    #hastaKayitContent .institutionOther input,
+    #hastaKayitContent .institutionOther select {
+        width: 47% !important;
+    }
+    #hastaKayitContent .contactInformation input,
+    #hastaKayitContent .contactInformation select,
+    #hastaKayitContent .contactInformation textarea {
+        width: 47% !important;
+    }
+    #hastaKayitContent .patientAdmission input,
+    #hastaKayitContent .patientAdmission select {
+        width: 50% !important;
+    }
+    #hastaKayitProcess .bgSoftBlue .col-xl-3.mt-3.px-5 {
+        padding: 0 20px !important;
+    }
+    #hastaKayitProcess .fsLaptop {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+    }
+    #hastaKayitProcess .fsLabelLaptop {
+        font-size: 14px !important;
+    }
+}
+
+
+
+/* HASTA KAYIT BİTİŞ */
+
+
+/* YÖNETİM MODÜLÜ KULLANICILAR BAŞLANGIÇ */
+
+#yonetimModuluKullanicilarSearch input {
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#yonetimModuluKullanicilarSearch .generalSearch ::placeholder {
+    font-weight: 700;
+    color: #112d4e;
+}
+
+#yonetimModuluKullanicilarSearch .generalSearch img {
+    right: 25px;
+    top: 32px;
+}
+
+#yonetimModuluKullanicilarSearch .generalSearchArea {
+    background-color: #3f72af;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#yonetimModuluKullanicilarSearch .idCodeSearchArea {
+    background-color: #dbe2ef;
+}
+
+#yonetimModuluKullanicilarSearch .idCodeSearchArea img {
+    right: 20px;
+    top: 9px;
+}
+#yonetimModuluKullanicilarSearch .btn-save,
+#yonetimModuluKullanicilarMainContent .btn-save {
+    background-color: #3f72af;
+}
+
+#yonetimModuluKullanicilarSearch .btn-edit,
+#yonetimModuluKullanicilarMainContent .btn-edit {
+    background-color: #ff9551;
+}
+
+#yonetimModuluKullanicilarSearch .btn-cancel,
+#yonetimModuluKullanicilarMainContent .btn-cancel {
+    background-color: #e64848;
+}
+
+#yonetimModuluKullanicilarSearch .btn-exit,
+#yonetimModuluKullanicilarMainContent .btn-exit {
+    background-color: #ffb3b3;
+}
+
+#yonetimModuluKullanicilarSearch .headerBtns label {
+    color: #112d4e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#yonetimModuluKullanicilarSearch .headerBtns button {
+    width: 50px;
+    height: 50px;
+}
+
+#yonetimModuluKullanicilarSearch .searchArea {
+    border: 1px solid #3f72af;
+    border-left: none;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTitle {
+    color: #112d4e;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenu {
+    background-color: #dbe2ef;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #3f72af;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuCard {
+    border-radius: 5px !important;
+    padding: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuCard span {
+    font-size: 18px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextRedBtn button {
+    border: none;
+    background-color: #e64848;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextRedBtn div {
+    margin-bottom: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextRedBtn span,
+#yonetimModuluKullanicilarMainContent .leftMenuTextOrangeBtn span,
+#yonetimModuluKullanicilarMainContent .leftMenuTextPinkBtn span {
+    font-weight: 500;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextOrangeBtn button {
+    border: none;
+    background-color: #ff9551;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextOrangeBtn div {
+    margin-bottom: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextPinkBtn button {
+    border: none;
+    background-color: #ffb3b3;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .leftMenuTextPinkBtn div {
+    margin-bottom: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .mainProcess {
+    border-bottom: 1px solid #3f72af;
+}
+
+#yonetimModuluKullanicilarMainContent .mainProcess span {
+    color: #112d4e;
+    font-size: 18px;
+}
+
+#yonetimModuluKullanicilarMainContent .processSearch {
+    background-color: #dbe2ef;
+    border-bottom: 1px solid #3f72af;
+}
+
+#yonetimModuluKullanicilarMainContent .processSearch .position-relative {
+    width: 70%;
+}
+
+#yonetimModuluKullanicilarMainContent .processSearch input {
+    width: 100%;
+}
+
+#yonetimModuluKullanicilarMainContent .processSearch .position-relative img {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+}
+
+#yonetimModuluKullanicilarMainContent .processSearch input {
+    border: 1px solid #3f72af;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessGroup button {
+    border: none;
+    background-color: transparent;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessGroup span {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.pageSubtitle {
+    font-weight: 700;
+    font-size: 18px;
+    color: #112d4e;
+}
+
+.bg-blue {
+    background-color: #dbe2ef;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessGroupContent input {
+    width: 70%;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessGroupContent input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessGroupContent button {
+    height: 50px;
+}
+
+#yonetimModuluKullanicilarMainContent .addprocessgroupbtn label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.borderBlue {
+    border: 1px solid #dbe2ef;
+    border-radius: 5px;
+}
+
+.text-blue {
+    color: #112d4e;
+}
+
+.fw-bolder {
+    font-weight: 500;
+}
+
+.card {
+    border-color: #dbe2ef !important;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessDetail label {
+    width: 50%;
+    font-weight: 700;
+    color: #112d4e;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessDetail input,
+#yonetimModuluKullanicilarMainContent .addProcessDetail select {
+    width: 50%;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessDetail input,
+#yonetimModuluKullanicilarMainContent .addProcessDetail select {
+    padding: 5px;
+    border: 2px solid #dbe2ef;
+    border-radius: 5px;
+}
+
+#yonetimModuluKullanicilarMainContent .addProcessDetail .card.d-flex.flex-row.align-items-center.border-0 {
+    margin-bottom: 20px;
+}
+
+#yonetimModuluKullanicilarMainContent .detailBtns label {
+    width: auto !important;
+}
+
+#yonetimModuluKullanicilarMainContent .collapse {
+    transition: 0s!important;
+}
+
+#yonetimModuluKullanicilarMainContent .collapse ul {
+    padding-left: 50px;
+    list-style: circle;
+}
+
+#yonetimModuluKullanicilarMainContent .collapse a {
+    text-decoration: none;
+    color: #112d4e;
+    font-weight: 500;
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    #yonetimModuluKullanicilarMainContent .leftMenuTextRedBtn {
+        padding: 10px !important;
+    }
+    #yonetimModuluKullanicilarMainContent .leftMenuTextOrangeBtn {
+        padding: 10px !important;
+    }
+    #yonetimModuluKullanicilarMainContent .leftMenuTextPinkBtn {
+        padding: 10px !important;
+    }
+}
+
+@media (max-width: 1280px) {
+    #yonetimModuluKullanicilarMainContent .leftMenuTextRedBtn {
+        padding: 5px !important;
+    }
+    #yonetimModuluKullanicilarMainContent .leftMenuTextOrangeBtn {
+        padding: 5px !important;
+    }
+    #yonetimModuluKullanicilarMainContent .leftMenuTextPinkBtn {
+        padding: 5px !important;
+    }
+    #yonetimModuluKullanicilarSearch .idCodeSearchArea input {
+        width: 90% !important;
+    }
+    #yonetimModuluKullanicilarSearch .idCodeSearchArea img {
+        right: 100px !important;
+    }
+    #yonetimModuluKullanicilarMainContent .detailBtns img {
+        width: 35px !important;
+    }
+}
+
+
+/* YÖNETİM MODÜLÜ KULLANICILAR BİTİŞ */
+
+
+/* SAĞLIK BİLGİ SİSTEMİ BAŞLANGIÇ */
+
+#saglikBilgiSistemi .searchBar input {
+    padding: 10px 30px;
+    border: 2px solid #3f72af;
+    border-radius: 15px;
+}
+
+#saglikBilgiSistemi .searchBar img {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+/*#saglikBilgiSistemi .card {*/
+/*    background-color: #DBE2EF;*/
+/*    color: #112d4e;*/
+/*    font-size: 22px;*/
+/*    font-weight: 700;*/
+/*    border: 1px solid #3f72af !important;*/
+/*    padding: 10px;*/
+/*}*/
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    #saglikBilgiSistemi .card img {
+        width: 100% !important;
+    }
+    #saglikBilgiSistemi .card {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 1280px) {
+    #saglikBilgiSistemi .card img {
+        width: 100% !important;
+    }
+    #saglikBilgiSistemi .card {
+        font-size: 18px !important;
+    }
+}
+
+
+/* SAĞLIK BİLGİ SİSTEMİ BİTİŞ */
+
+
+/* YATIŞ MODÜLÜ BAŞLANGIÇ */
+
+#yatisModulu .btn-red {
+    background-color: #ffb3b3;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid #3f72af;
+    padding: 5px !important;
+}
+.btnyatis{
+    background-color: #ffb3b3 !important;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid #3f72af;
+    padding: 5px !important;
+}
+
+#yatisModulu .institutionOther {
+    height: 435px;
+}
+
+#yatisModulu .nav-pills button {
+    background-color: #fff;
+    border: 1px solid #DBE2EF;
+    color: #112d4e;
+}
+
+.aktif-satir{
+    background:#60b3abad !important;
+    color: white !important;
+}
+
+.basarili{
+    background:#60b3abad !important;
+    /*color: white;*/
+}
+
+.basarisiz{
+    background:#ff88b4ad  !important;
+    /*color: white;*/
+}
+
+#yatisModulu .nav-pills .active {
+    background-color: #3f72af !important;
+    border: 1px solid #3f72af !important;
+}
+
+#yatisModulu .hospitalizationDetail label {
+    width: 18%;
+}
+
+#yatisModulu .hospitalizationDetail select,
+#yatisModulu .hospitalizationDetail input {
+    width: 50%;
+}
+
+#yatisModulu .btn-update {
+    background-color: #ff9551;
+}
+
+#yatisModulu .btn-trash {
+    background-color: #e64848;
+}
+
+/*#yatisModulu .nav-tabs>li {*/
+/*    height: 21% !important;*/
+/*}*/
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    #yatisModulu .institutionOther select,
+    #yatisModulu .institutionOther input {
+        width: 100% !important;
+    }
+    #yatisModulu .institutionOther {
+        height: 555px !important;
+    }
+    #yatisModulu .hospitalizationDetail label {
+        width: 25% !important;
+    }
+    #yatisModulu .hospitalizationDetail select,
+    #yatisModulu .hospitalizationDetail input {
+        width: 65% !important;
+    }
+    #yatisModulu .patientInformation textarea {
+        width: 55% !important;
+    }
+}
+
+@media (max-width: 1280px) {
+    #yatisModulu .institutionOther select,
+    #yatisModulu .institutionOther input {
+        width: 100% !important;
+    }
+    #yatisModulu .btn-red {
+        font-size: 12px !important;
+    }
+    #yatisModulu .institutionOther {
+        height: 545px !important;
+    }
+    #yatisModulu .patientInformation textarea {
+        width: 50% !important;
+    }
+    #yatisModulu .hospitalizationDetail label {
+        width: 25% !important;
+    }
+    #yatisModulu .hospitalizationDetail select,
+    #yatisModulu .hospitalizationDetail input {
+        width: 55%!important;
+    }
+}
+
+
+
+
+.btntanimla-dom {
+
+    width: 400px;
+    border-radius: 10px;
+    background: #112d4e;
+    margin-bottom: 10px;
+    color: #F9F7F7 !important;
+    border-color: #E64848 !important
+}
+
+
+/** Burası eski yeni renk kodu olan style kullanıldı aşağıda reçete açıklamasında
+/*.btn-update {*/
+/*    color: #F9F7F7 !important;*/
+/*    background-color: #112d4e !important;*/
+/*}*/
+
+.parmak-aktif {
+    cursor: pointer !important;
+}
+.parmak-pasif {
+    cursor: no-drop !important;
+}
+/* YATIŞ MODÜLÜ BİTİŞ */
+
+
+
+.fa {
+    cursor: pointer !important;
+}
+
+.fa-plus {
+    cursor: pointer !important;
+}
+
+.modal-header {
+    background-color: #3F72AF !important;
+    color:white !important;
+}
+
+.card-header {
+    background-color: #3F72AF !important;
+}
+
+.btntanimla {
+    cursor: pointer !important;
+}
+
+tbody{
+    cursor:pointer !important;
+}
+
+ .card-header{
+    background-color:#3F72AF !important;
+     color: white !important;
+ }
+
+ /* Reçete Modülü CSS      --------------------------------------------------------------------------------------------*/
+
+#receteModulu .btn-update {
+    background-color: #ff9551;
+}
+
+#receteModulu .btn-trash {
+    background-color: #e64848;
+}
+
+#receteModulu .btn-ok {
+    background-color: #3f72af;
+}
+
+
+
+/*#receteModulu .nav-tabs>li {*/
+/*    height: 21% !important;*/
+/*}*/
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+/*KAN MERKEZİ MODÜLÜ*/
+
+#kanMerkeziModulu .btn-pink{
+    background-color: #FFB3B3;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+#kanMerkeziModulu .btn-add {
+    background-color: #FF9551;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+#kanMerkeziModulu .btn-red {
+    background-color: #E64848;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+#kanMerkeziModulu .btn-add1 {
+    background-color: #FFB3B3;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+#kanMerkeziModulu .btn-edit {
+    background-color: #FF9551;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+#kanMerkeziModulu .btn-ok {
+    background-color: #60b3abad;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+#kanMerkeziModulu .btn-reddet {
+    background-color: #f9f7f7;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+
+/***********************************   Son eklenen css ler    */
+
+
+#refakatcitab_filter > label  {
+    width: 100%;
+}
+#refakatcitab_filter > label > input{
+    width: 91%;
+}
+.card-title, .kapat-btn{
+    background-color:#3F72AF !important;
+    color: white !important;
+}
+.modal-header{
+    background-color:#112D4E !important;
+    color: white !important;
+}
+.sil-btn{
+    background-color:#E64848 !important;
+    color: white !important;
+}
+.yeni-btn{
+    background-color:#FF9551 !important;
+    color: white !important;
+}
+.kps-btn{
+    background-color:#FFB3B3 !important;
+    color: white !important;
+}
+.up-btn{
+    background-color:#60b3abad !important;
+    color: white !important;
+}
+.yatis-btn{
+    background-color:#39B496FF !important;
+}
+.tabs-inner {
+    margin-right:3px !important;
+}
+
+.bg-yesil{
+    background-color:#93cbc6 !important;
+}
+
+.bg-yesil-2 {
+    background-color:#93cbc6 !important;
+}
+
+input::-webkit-input-placeholder {
+    color: black; /*Change the placeholder color*/
+    opacity: 0.3; /*Change the opacity between 0 and 1*/
+}
+
+.input-group-append{
+    cursor: pointer;
+}
+
+.borer-701 {
+    border: 1px solid black;
+}
+
+.col-1-5 {
+    flex: 0 0 12.3%;
+    max-width: 12.3%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*  Windows Tema Css Bitiş*********************************************************************************************/
+
+.input-align{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.sol-5{
+    margin-left: 50px;
+}
+
+.lab_left_menu_btncolor{
+    color: #dbe2ef; !important;
+}
+
+.alertify-notifier{
+    z-index:999999 !important;
+    position: absolute;
+}
+
+.border-solid{
+    border: 1px solid;
+}
+
+
+.alertify{
+    z-index: 99999999 !important;
+    position: absolute;
+}
+
+.ajs-modal {
+    z-index: 99999999 !important;
+    position: absolute;
+
+}
+

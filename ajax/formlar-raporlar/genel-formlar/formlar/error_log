@@ -1,0 +1,3 @@
+[15-Mar-2023 10:48:46 UTC] PHP Warning:  include(../../../controller/fonksiyonlar.php): failed to open stream: No such file or directory in /home/systemihars/public_html/ajax/formlar-raporlar/genel-formlar/hasta-bilgi-template.php on line 1
+[15-Mar-2023 10:48:46 UTC] PHP Warning:  include(../../../controller/fonksiyonlar.php): failed to open stream: No such file or directory in /home/systemihars/public_html/ajax/formlar-raporlar/genel-formlar/hasta-bilgi-template.php on line 1
+[15-Mar-2023 10:48:46 UTC] PHP Warning:  include(): Failed opening '../../../controller/fonksiyonlar.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/systemihars/public_html/ajax/formlar-raporlar/genel-formlar/hasta-bilgi-template.php on line 1

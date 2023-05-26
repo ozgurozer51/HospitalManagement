@@ -1,0 +1,1 @@
+[13-Apr-2017 14:58:02 Europe/Istanbul] PHP Fatal error:  Class 'Mike42\Escpos\EscposImage' not found in /home/prosipyazilim/caferinyeri.prosipyazilim.com/local_print_server/src/Mike42/Escpos/ImagickEscposImage.php on line 22

@@ -1,0 +1,40 @@
+[20-Mar-2023 15:14:57 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 11:   and patients_reports_forms.status=true
+           ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select patients...')
+#1 /home/systemihars/public_html/ajax/formlar-raporlar/hastaya-eklenen-formlar/hasta-gecmis-rapor-form.php(16): sql_select('select patients...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 15:14:58 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "and"
+LINE 11:   and patients_reports_forms.status=true
+           ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select patients...')
+#1 /home/systemihars/public_html/ajax/formlar-raporlar/hastaya-eklenen-formlar/hasta-gecmis-rapor-form.php(16): sql_select('select patients...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 15:15:37 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "undefined" does not exist
+LINE 1: select id from undefined fect where status='1' order by id d...
+                       ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select id from ...')
+#1 /home/systemihars/public_html/ajax/formlar-raporlar/hastaya-eklenen-formlar/forms-sql.php(34): sql_select('select id from ...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 15:15:38 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "undefined" does not exist
+LINE 1: select id from undefined fect where status='1' order by id d...
+                       ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select id from ...')
+#1 /home/systemihars/public_html/ajax/formlar-raporlar/hastaya-eklenen-formlar/forms-sql.php(34): sql_select('select id from ...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415
+[20-Mar-2023 15:15:38 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "undefined" does not exist
+LINE 1: select id from undefined fect where status='1' order by id d...
+                       ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1415
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1415): PDO->query('select id from ...')
+#1 /home/systemihars/public_html/ajax/formlar-raporlar/hastaya-eklenen-formlar/forms-sql.php(34): sql_select('select id from ...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1415

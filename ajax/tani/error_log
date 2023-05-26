@@ -1,0 +1,32 @@
+[04-Apr-2023 14:49:15 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 7: ...            AND users_diagnosis_favorites.insert_userid = ''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('SELECT diagnose...')
+#1 /home/systemihars/public_html/ajax/tani/tanifavekle.php(62): verilericoklucek('SELECT diagnose...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[04-Apr-2023 14:49:16 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 7: ...            AND users_diagnosis_favorites.insert_userid = ''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('SELECT diagnose...')
+#1 /home/systemihars/public_html/ajax/tani/tanifavekle.php(62): verilericoklucek('SELECT diagnose...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[04-Apr-2023 14:49:23 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 7: ...            AND users_diagnosis_favorites.insert_userid = ''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('SELECT diagnose...')
+#1 /home/systemihars/public_html/ajax/tani/tanifavekle.php(62): verilericoklucek('SELECT diagnose...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[07-Apr-2023 13:37:06 Europe/istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 17: ...umber from patient_registration where protocol_number='') or
+                                                                  ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select patient_...')
+#1 /home/systemihars/public_html/ajax/tani/tanilistesi.php(743): verilericoklucek('select patient_...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398

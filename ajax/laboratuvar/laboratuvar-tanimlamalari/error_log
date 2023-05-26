@@ -1,0 +1,64 @@
+[05-Apr-2023 09:59:17 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 1: ...1,status=$2,update_datetime=$3,update_userid=$4 where  id=''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:943
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(943): PDOStatement->execute(Array)
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontrolvelottanitma.php(30): direktguncelle('lab_device_qual...', 'id', '', Array)
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 943
+[05-Apr-2023 09:59:25 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 1: ...1,status=$2,update_datetime=$3,update_userid=$4 where  id=''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:943
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(943): PDOStatement->execute(Array)
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontrolvelottanitma.php(30): direktguncelle('lab_device_qual...', 'id', '', Array)
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 943
+[05-Apr-2023 09:59:29 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 1: ...1,status=$2,update_datetime=$3,update_userid=$4 where  id=''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:943
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(943): PDOStatement->execute(Array)
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontrolvelottanitma.php(30): direktguncelle('lab_device_qual...', 'id', '', Array)
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 943
+[05-Apr-2023 11:20:31 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from lab_define_quality_control_test where lot_id=
+                                                                   ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select * from l...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontroltesttanitma.php(377): verilericoklucek('select * from l...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[05-Apr-2023 11:26:15 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from lab_define_quality_control_test where lot_id=
+                                                                   ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select * from l...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontroltesttanitma.php(377): verilericoklucek('select * from l...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[05-Apr-2023 11:33:41 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from lab_define_quality_control_test where lot_id=
+                                                                   ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select * from l...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontroltesttanitma.php(377): verilericoklucek('select * from l...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[05-Apr-2023 11:33:49 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: ""
+LINE 1: ...m lab_test_parameter where lab_test_parameter.analysis_id=''
+                                                                     ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select * from l...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontroltesttanitma.php(872): verilericoklucek('select * from l...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
+[05-Apr-2023 13:46:42 Europe/Istanbul] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: select * from lab_define_quality_control_test where lot_id=
+                                                                   ^ in /home/systemihars/public_html/controller/fonksiyonlar.php:1398
+Stack trace:
+#0 /home/systemihars/public_html/controller/fonksiyonlar.php(1398): PDO->query('select * from l...')
+#1 /home/systemihars/public_html/ajax/laboratuvar/laboratuvar-tanimlamalari/kalitekontroltesttanitma.php(377): verilericoklucek('select * from l...')
+#2 {main}
+  thrown in /home/systemihars/public_html/controller/fonksiyonlar.php on line 1398
