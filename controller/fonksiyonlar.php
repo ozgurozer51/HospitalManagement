@@ -17,12 +17,7 @@ function veritabanibaglantisi()
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ];
     $baglanti_cumlesi = sprintf(
-        "pgsql:host=%s port=%s dbname=%s user=%s password=%s",
-        "nedir5.com",
-        "5432",
-        "hbysgen_t",
-        "hbysgen_c",
-        "Bal1kesir******"
+     
     );
 
     try {
